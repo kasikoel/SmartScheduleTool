@@ -1,4 +1,5 @@
 package com.example.smartschedule.model;
 
-public class Role {
+public enum Role {
+    STUDENT, ADMIN
 }
