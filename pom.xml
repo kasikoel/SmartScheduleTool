@@ -9,15 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <!-- Properties -->
-    <properties>
-        <!-- Java Version -->
-        <java.version>17</java.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <spring-boot.version>3.1.5</spring-boot.version>
-    </properties>
-
     <!-- Parent POM -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -26,15 +17,16 @@
         <relativePath/> <!-- Lookup parent from repository -->
     </parent>
 
+    <!-- Properties -->
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
     <!-- Dependencies -->
     <dependencies>
 
-
-        <!-- Spring Boot Starter Security -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
 
         <!-- Spring Boot Starter Data JPA -->
         <dependency>
@@ -56,7 +48,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lombok for reducing boilerplate code -->
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -70,7 +62,11 @@
             <scope>test</scope>
         </dependency>
 
-
+        <!-- Spring Boot Starter Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
         <!-- Netty Socket.IO for WebSocket Support -->
         <dependency>
@@ -98,8 +94,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.1.5</version>
                 <configuration>
-                    <mainClass>com.example.smartschedule.Main</mainClass>
+                    <mainClass>com.example.smartschedule.SmartScheduleApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,23 +1,37 @@
 package com.example.smartschedule.model;
 
-import jakarta.persistence.*;
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
 
 @Entity
-@Table(name = "courses")
-@Data // Lombok annotation for getters, setters, equals, hashCode, and toString
 public class Course {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String name;
+    private String description;
 
-    @Column(nullable = false, unique = true)
-    private String code;
+    public Object getDescription() {
+        return null;
+    }
 
-    @Column(nullable = false)
-    private Integer credits;
+    public Object getName() {
+        return null;
+    }
+
+    public Object getId() {
+        return null;
+    }
+
+    public void setName(Object name) {
+    }
+
+    public void setDescription(Object description) {
+    }
+
+    // Getters and setters (or use Lombok annotations like @Data)
 }

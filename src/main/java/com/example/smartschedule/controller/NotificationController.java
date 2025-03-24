@@ -1,6 +1,9 @@
 package com.example.smartschedule.controller;
 
 import com.corundumstudio.socketio.SocketIOServer;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.corundumstudio.socketio.SocketIOServer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
